@@ -1,11 +1,5 @@
 /*jshint node: true */
 
-console.log(process.env.TRAVIS_SECURE_ENV_VARS);
-
-if (!process.env.TRAVIS_SECURE_ENV_VARS) {
-  return;
-}
-
 var url = require('url');
 var fs = require('fs');
 var cp = require('child_process');
@@ -52,7 +46,7 @@ var browserConfig = [{
 //   name: 'win2008/opera'
 }];
 
-module.exports = function(grunt) {
+var grunt = function(grunt) {
 
   var testStartTime = new Date();
   var testResults = {};
@@ -216,3 +210,13 @@ module.exports = function(grunt) {
 
   grunt.registerTask('default', 'build');
 };
+
+if (process.env.TRAVIS_SECURE_ENV_VARS) {
+  module.exports = function() {
+    grunt.registerTask('default', '', function() {
+      console.log('borked');
+    });
+  }
+} else {
+  module.exports = grunt;
+}
