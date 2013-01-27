@@ -46,7 +46,7 @@ var browserConfig = [{
 //   name: 'win2008/opera'
 }];
 
-var grunt = function(grunt) {
+module.exports = function(grunt) {
 
   var testStartTime = new Date();
   var testResults = {};
@@ -210,13 +210,3 @@ var grunt = function(grunt) {
 
   grunt.registerTask('default', 'build');
 };
-
-if (process.env.TRAVIS_SECURE_ENV_VARS) {
-  module.exports = function() {
-    grunt.registerTask('default', '', function() {
-      console.log('borked');
-    });
-  }
-} else {
-  module.exports = grunt;
-}
