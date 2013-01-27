@@ -7,6 +7,6 @@ services:
 
 env:
   global:
-    - secure: "iBwfCsWCVBL4/UwORr8ti1hcyb4CyYmoc+gVfM36925eR9OrwoDlzQLGgI23\nW2SVSEPGazlb4lkbmZ8L/P26Jow6cXSiypmNBz7B29A/nPpv7R+qw3kPSx+F\n2QqXrGM0KWQxVnE+PbO5NKfFJ5txOaJ5ThRZy8acV8Q/L/E/cK0="
+    - secure: "M0xltS2tLEYNJypb5LV0ZcJo1G3LEDn002mUCA1yg9mHcvxVUDuuf1WRGWdv\n4GK8LJH5xB6DiVFLj2Gz2jTzBJM8zk2mTy0PL0hDpLVgF2wxUgObBg08XzSv\n3CqGfDUU612EEaezFKmf9nQ5bGH1LJrsAJDv6hK1T45Lyo4tPoY="
     - secure: "fL+1vGzXKNd85tUHf8VhWijaPoYXsxK/xqjoFPi0c75VFH/BLxBSn7gStCqG\nX2/eJnRXPfGKonlUZSmusbZj41f7ZEKpdqltY0i9M7KBhfDTCjpXi7Pnd0hY\n5IkNcjd7T/H6aspLGaDzNq7TxgNrInlqdFn5lWB8CF2XFZWgm9s="
     - WTF=testing
