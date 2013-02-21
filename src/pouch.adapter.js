@@ -37,13 +37,13 @@ var PouchAdapter = function(opts, callback) {
   }
 
   if (!api.hasOwnProperty('putAttachment')) {
-    api.putAttachment = api.putAttachment = function (id, rev, doc, type, callback) {
+    api.putAttachment = api.putAttachment = function (id, rev, blob, callback) {
       id = parseDocId(id);
       api.get(id.docId, {attachments: true}, function(err, obj) {
         obj._attachments = obj._attachments || {};
         obj._attachments[id.attachmentId] = {
-          content_type: type,
-          data: btoa(doc)
+          content_type: blob.type,
+          data: blob
         };
         api.put(obj, callback);
       });
